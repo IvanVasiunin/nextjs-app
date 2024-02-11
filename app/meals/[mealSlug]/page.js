@@ -3,20 +3,24 @@ import classes from "./page.module.css";
 import { getMeal } from "@/lib/meals";
 import { notFound } from "next/navigation";
 
-export default async function MealDetailsPage({params}) {
+export default async function MealDetailsPage({ params }) {
   const meal = getMeal(params.mealSlug);
-  
-  if(!meal) {
+
+  if (!meal) {
     notFound();
   }
 
-  meal.instructions = meal.instructions.replace(/\n/g, '<br />');
+  meal.instructions = meal.instructions.replace(/\n/g, "<br />");
 
   return (
     <>
       <header className={classes.header}>
         <div className={classes.image}>
-          <Image src={meal.image} alt={meal.title} fill />
+          <Image
+            src={`https://ivanv-nextjs-demo-users-image.s3.amazonaws.com/${meal.image}`}
+            alt={meal.title}
+            fill
+          />
         </div>
         <div className={classes.headerText}>
           <h1>{meal.title}</h1>

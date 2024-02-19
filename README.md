@@ -7,6 +7,10 @@ In this app you can view the list of added recipes, add your recipe, explore the
     <img src="https://github.com/IvanVasiunin/nextjs-app/blob/main/public/app_UI.jpg" alt="UI_snapshot" />
 </div>
 
+## Demo
+
+<a href="https://nextjs-app-zeta-five.vercel.app/">Check demo here</a>
+
 ## For developers
 
 First, run the development server:
